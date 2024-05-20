@@ -1,0 +1,87 @@
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+$primary: #ffa101;
+$secondary: #13213c;
+$gradient: #b400ff;
+
+.border-bottom {
+  border-bottom: var(--bs-border-width) var(--bs-border-style) $primary !important;
+}
+
+.navbar-toggler {
+  background-color: #31405e;
+}
+
+.bg-gradient-secondary-to-primary {
+  background: $primary;
+  background: linear-gradient(135deg, $secondary 0%, $primary 100%);
+}
+
+.text-gradient {
+  background: -webkit-linear-gradient(325deg, $secondary 5%, $primary 95%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.right-left-underline {
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(to left, white 40%, black 70%);
+  border-image-slice: 1;
+}
+
+.left-right-underline {
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(to right, white 40%, black 70%);
+  border-image-slice: 1;
+}
+
+.balloon {
+  background: linear-gradient(to right, rgb(109, 109, 109) 0%, black 100%);
+  border-radius: 50px;
+  position: relative;
+}
+
+.balloon .tip {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50px;
+  bottom: -18px;
+  border: solid 10px;
+  border-color: #656565 transparent transparent transparent;
+}
+
+// Buttonsx
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #ffa101;
+  --bs-btn-border-color: #ffa101;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #cb8101;
+  --bs-btn-hover-border-color: #c98b1f;
+  --bs-btn-focus-shadow-rgb: 64, 79, 245;
+  --bs-btn-active-color: #312f2f;
+  --bs-btn-active-bg: #d59018;
+  --bs-btn-active-border-color: #a97214;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #ffa101;
+  --bs-btn-disabled-border-color: #ffa101;
+}
+
+// 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/variables-dark";
+
+// 4. Include any default map overrides here
+
+// 5. Include remainder of required parts
+@import "../bootstrap/scss/maps";
+@import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/root";
