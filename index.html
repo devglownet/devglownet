@@ -261,7 +261,7 @@
                                       <label for="message" class="form-label text-white">Tu mensaje</label>
                                       <textarea class="form-control" id="message" rows="3" placeholder="Cuentanos lo que necesites"></textarea>
                                   </div>
-                                  <button class="btn btn-primary float-end" onclick="SendEmail()">
+                                  <a href="mailto:info@glownetwork.net" class="btn btn-primary float-end">
                                       Contactanos
                                   </button>
                               </div>
@@ -302,21 +302,6 @@
               </div>
           </section>
 
-          <script>
-              function SendEmail() {
-                  let name = document.getElementById("name");
-                  let company = document.getElementById("company");
-                  let msg = document.getElementById("message");
-                  console.log(name.value, company.value, msg.value);
-                  let uri = `mailto:info@glownetwork.net&subject=${name.value}&body=${msg.value}`;
-
-                  var link = document.createElement("a");
-                  link.download = name;
-                  link.href = uri;
-                  link.click();
-              }
-
-          </script>
       </main>
 
       <!-- Footer-->
